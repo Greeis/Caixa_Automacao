@@ -1,4 +1,4 @@
-"# Caixa_Automacao" 
+# Curso_Automacao
+Automação - QANinja
 
-Curso de Automação - QANinja
-Exercicio - Caixa 
+Exercicio Caixa
