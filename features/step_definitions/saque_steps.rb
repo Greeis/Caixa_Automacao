@@ -24,15 +24,13 @@ class Conta
   attr_accessor :saldo, :mensagem_saida
 
   def saque (valor)
-    if valor <= 700
-      if saldo > valor # saldo é maior que o valor que deseja sacar
-        @saldo -= valor
-        @mensagem_saida = 'Saque com sucesso. Muito Obrigado!'
-      else
-        @mensagem_saida = 'Saldo insuficiente para saque.'    
-      end
-    else
+    if valor > @saldo
+      @mensagem_saida = 'Saldo insuficiente para saque.'   
+    elsif valor > 700
       @mensagem_saida = 'Valor máximo por transação deve ser de 700 reais!'
+    else
+      @saldo -= valor
+      @mensagem_saida = 'Saque com sucesso. Muito Obrigado!'
     end
   end
 end 
